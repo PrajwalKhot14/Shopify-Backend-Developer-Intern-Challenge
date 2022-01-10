@@ -35,7 +35,7 @@ engine = sqlalchemy.create_engine(
 metadata.create_all(engine)
 
 # Models
-class UserList(BaseModel):
+class InventoryList(BaseModel):
     id:str
     product_name:str
     category:str
@@ -54,7 +54,7 @@ async def startup():
 async def shutdown():
     await database.disconnect()
 
-@app.get("/users", response_model=List[UserList])
+@app.get("/inventory", response_model=List[InventoryList])
 async def find_all_users():
     query = users.select()
     return await database.fetch_all(query)
