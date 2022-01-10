@@ -1,8 +1,10 @@
 # Shopify-Backend-Developer-Intern-Challenge
 1. PostgreSQL needs to be installed to run
+   ```
    Credentials: username: postgres
                 password: 9663168172
                 dbname: shopify
+   ```
 2. Create Table using: 
    ```
    CREATE TABLE IF NOT EXISTS public.py_users
